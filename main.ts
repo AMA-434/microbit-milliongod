@@ -1,3 +1,30 @@
+function kakutei_O () {
+    music.playTone(69, music.beat(BeatFraction.Quarter))
+    music.playTone(370, music.beat(BeatFraction.Sixteenth))
+    music.playTone(277, music.beat(BeatFraction.Sixteenth))
+    music.playTone(740, music.beat(BeatFraction.Sixteenth))
+    music.playTone(554, music.beat(BeatFraction.Sixteenth))
+    for (let index = 0; index < 2; index++) {
+        music.playTone(466, music.beat(BeatFraction.Sixteenth))
+        music.playTone(370, music.beat(BeatFraction.Sixteenth))
+        music.playTone(932, music.beat(BeatFraction.Sixteenth))
+        music.playTone(740, music.beat(BeatFraction.Sixteenth))
+        music.playTone(554, music.beat(BeatFraction.Sixteenth))
+        music.playTone(466, music.beat(BeatFraction.Sixteenth))
+        music.playTone(1108, music.beat(BeatFraction.Sixteenth))
+        music.playTone(932, music.beat(BeatFraction.Sixteenth))
+    }
+    music.playTone(587, music.beat(BeatFraction.Sixteenth))
+    music.playTone(466, music.beat(BeatFraction.Sixteenth))
+    music.playTone(1174, music.beat(BeatFraction.Sixteenth))
+    music.playTone(932, music.beat(BeatFraction.Sixteenth))
+    for (let index = 0; index < 2; index++) {
+        music.playTone(698, music.beat(BeatFraction.Sixteenth))
+        music.playTone(587, music.beat(BeatFraction.Sixteenth))
+        music.playTone(1174, music.beat(BeatFraction.Sixteenth))
+        music.playTone(1396, music.beat(BeatFraction.Sixteenth))
+    }
+}
 input.onButtonPressed(Button.AB, function () {
     if (button == 3) {
     	
@@ -6,6 +33,7 @@ input.onButtonPressed(Button.AB, function () {
     }
 })
 function millionGod () {
+    music.setVolume(127)
     for (let index = 0; index < 1; index++) {
         for (let index = 0; index < 4; index++) {
             music.playTone(659, music.beat(BeatFraction.Eighth))
@@ -109,6 +137,7 @@ button = 3
 hyun()
 basic.forever(function () {
     if (button == 0 && input.buttonIsPressed(Button.A)) {
+        music.playTone(20, music.beat(BeatFraction.Half))
         basic.showLeds(`
             . # # # .
             . # . . .
@@ -135,6 +164,7 @@ basic.forever(function () {
             . # # # .
             `)
         basic.pause(500)
+        kakutei_O()
         button = 2
     } else if (button == 1) {
         basic.showLeds(`
@@ -145,6 +175,8 @@ basic.forever(function () {
             . . . . .
             `)
     } else if (button == 2 && input.buttonIsPressed(Button.B)) {
+        music.playTone(15, music.beat(BeatFraction.Whole))
+        music.playTone(5, music.beat(BeatFraction.Whole))
         basic.showLeds(`
             . # # . .
             . # . # .
@@ -152,7 +184,7 @@ basic.forever(function () {
             . # . # .
             . # # . .
             `)
-        basic.pause(500)
+        basic.pause(2000)
         millionGod()
         basic.pause(1000)
         button = 0
