@@ -155,6 +155,7 @@ basic.forever(function () {
         basic.pause(500)
         millionGod()
         basic.pause(1000)
+        button = 0
     } else if (button == 2) {
         basic.showLeds(`
             . # # . .
