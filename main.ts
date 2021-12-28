@@ -149,13 +149,14 @@ basic.forever(function () {
         button = 1
     } else if (button == 0) {
         basic.showLeds(`
-            . . # . .
-            . # . # .
-            . # # # .
-            . # . # .
-            . # . # .
+            . . . . .
+            # . . . .
+            # # . . .
+            # . . . .
+            . . . . .
             `)
     } else if (button == 1 && input.buttonIsPressed(Button.AB)) {
+        kakutei_O()
         basic.showLeds(`
             . # # # .
             . # . # .
@@ -164,7 +165,6 @@ basic.forever(function () {
             . # # # .
             `)
         basic.pause(500)
-        kakutei_O()
         button = 2
     } else if (button == 1) {
         basic.showLeds(`
@@ -190,11 +190,11 @@ basic.forever(function () {
         button = 0
     } else if (button == 2) {
         basic.showLeds(`
-            . # # . .
-            . # . # .
-            . # # . .
-            . # . # .
-            . # # . .
+            . . . . .
+            . . . . #
+            . . . # #
+            . . . . #
+            . . . . .
             `)
     } else {
         basic.clearScreen()
